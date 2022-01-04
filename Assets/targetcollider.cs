@@ -27,24 +27,26 @@ public class targetcollider : MonoBehaviour
 
         Destroy(collision.collider.gameObject);
 
-        if (collision.collider.tag == "ORGANIC" && gameObject.tag == "ORGANIC_BIN")
+        if (gameObject.tag == "ORGANIC_BIN" && collision.collider.tag == "ORGANIC")
         {
             ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints + 1);
         }
-
-        else if (collision.collider.tag == "PLASTIC" && gameObject.tag == "PLASTIC_BIN")
+        else if (gameObject.tag == "PLASTIC_BIN" && collision.collider.tag == "PLASTIC")
         {
             ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints + 1);
         }
-
-        else if (collision.collider.tag == "PAPER" && gameObject.tag == "PAPER_BIN")
+        else if (gameObject.tag == "PAPER_BIN" && collision.collider.tag == "PAPER")
         {
             ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints + 1);
-        } else
+        }
+        else if (gameObject.tag == "EWASTE_BIN" && collision.collider.tag == "EWASTE")
+        {
+            ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints + 1);
+        }
+        else
         {
             ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints - 1);
         }
-
 
 
         hitsound.Play();
@@ -78,6 +80,7 @@ public class targetcollider : MonoBehaviour
 
         }
     }
+
     // Update is called once per frame
     void Update()
     {

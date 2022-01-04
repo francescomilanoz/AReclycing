@@ -19,6 +19,7 @@ TagManager:
   - ORGANIC_BIN
   - PLASTIC_BIN
   - PAPER_BIN
+  - EWASTE_BIN
   layers:
   - Default
   - TransparentFX

@@ -17,6 +17,7 @@ public class ExampleSpooky : MonoBehaviour
 	public GameObject BananaPrefab;
 	public GameObject PaperPrefab;
 	public GameObject BottlePrefab;
+	public GameObject ApplePrefab;
 	public Transform arrowLocation;
     [SerializeField]
 	Sprite openHandSprite;
@@ -25,6 +26,10 @@ public class ExampleSpooky : MonoBehaviour
     public bool grabflag;
     public Button energybar;
     public float f;
+
+	public Text text;
+	public int num;
+
 	// Use this for initialization
 	void Start()
 	{
@@ -92,14 +97,35 @@ public class ExampleSpooky : MonoBehaviour
                     //   bow.transform.position = new Vector3(spookeyImageHolder.transform.position.x, spookeyImageHolder.transform.position.y, bow.transform.position.z);
                     grabflag = true;
                     triggertext.text = "GRABBED";
+
+					num = Random.Range(1, 5);
+
+					switch (num)
+					{
+						case 1:
+							text = GameObject.Find("Object").GetComponent<Text>();
+							text.text = "OBJECT: Banana";
+							break;
+						case 2:
+							text = GameObject.Find("Object").GetComponent<Text>();
+							text.text = "OBJECT: Paper";
+							break;
+						case 3:
+							text = GameObject.Find("Object").GetComponent<Text>();
+							text.text = "OBJECT: Bottle";
+							break;
+						case 4:
+							text = GameObject.Find("Object").GetComponent<Text>();
+							text.text = "OBJECT: Apple";
+							break;
+					}
+
 					break;
                 case ManoGestureTrigger.RELEASE_GESTURE:
                     // bow.transform.position = new Vector3(spookeyImageHolder.transform.position.x, spookeyImageHolder.transform.position.y, bow.transform.position.z);
                     //   spookeyImageHolder.sprite = closedHandSprite;
                     shotPower = Mathf.Lerp(800, 2800, f);
                     triggertext.text = "RELEASED";
-
-					int num = Random.Range(1, 4);
 
 					switch (num)
 					{
@@ -111,6 +137,9 @@ public class ExampleSpooky : MonoBehaviour
 							break;
 						case 3:
 							Instantiate(BottlePrefab, arrowLocation.position, arrowLocation.rotation).GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * shotPower);
+							break;
+						case 4:
+							Instantiate(ApplePrefab, arrowLocation.position, arrowLocation.rotation).GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * shotPower);
 							break;
 					}
 
