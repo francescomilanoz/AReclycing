@@ -18,6 +18,19 @@ public class ExampleSpooky : MonoBehaviour
 	public GameObject PaperPrefab;
 	public GameObject BottlePrefab;
 	public GameObject ApplePrefab;
+	public GameObject KiwiPrefab;
+	public GameObject LimePrefab;
+	public GameObject BallPrefab;
+	public GameObject PaperBagPrefab;
+	public GameObject FoglioPrefab;
+	public GameObject GlassPrefab;
+	public GameObject WaterPrefab;
+	public GameObject BasketPrefab;
+	public GameObject LidPrefab;
+	public GameObject ContainerPrefab;
+	public GameObject AromaPrefab;
+	public GameObject SpannerPrefab;
+	public GameObject PalletPrefab;
 	public Transform arrowLocation;
     [SerializeField]
 	Sprite openHandSprite;
@@ -98,7 +111,7 @@ public class ExampleSpooky : MonoBehaviour
                     grabflag = true;
                     triggertext.text = "GRABBED";
 
-					num = Random.Range(1, 5);
+					num = Random.Range(1, 18);
 
 					switch (num)
 					{
@@ -117,6 +130,58 @@ public class ExampleSpooky : MonoBehaviour
 						case 4:
 							text = GameObject.Find("Object").GetComponent<Text>();
 							text.text = "OBJECT: Apple";
+							break;
+						case 5:
+							text = GameObject.Find("Object").GetComponent<Text>();
+							text.text = "OBJECT: Kiwi";
+							break;
+						case 6:
+							text = GameObject.Find("Object").GetComponent<Text>();
+							text.text = "OBJECT: Lime";
+							break;
+						case 7:
+							text = GameObject.Find("Object").GetComponent<Text>();
+							text.text = "OBJECT: Baseball ball";
+							break;
+						case 8:
+							text = GameObject.Find("Object").GetComponent<Text>();
+							text.text = "OBJECT: Paper bag";
+							break;
+						case 9:
+							text = GameObject.Find("Object").GetComponent<Text>();
+							text.text = "OBJECT: Sheet";
+							break;
+						case 10:
+							text = GameObject.Find("Object").GetComponent<Text>();
+							text.text = "OBJECT: Plastic cups";
+							break;
+						case 11:
+							text = GameObject.Find("Object").GetComponent<Text>();
+							text.text = "OBJECT: Water bottle";
+							break;
+						case 12:
+							text = GameObject.Find("Object").GetComponent<Text>();
+							text.text = "OBJECT: Basket";
+							break;
+						case 13:
+							text = GameObject.Find("Object").GetComponent<Text>();
+							text.text = "OBJECT: Container";
+							break;
+						case 14:
+							text = GameObject.Find("Object").GetComponent<Text>();
+							text.text = "OBJECT: Lid";
+							break;
+						case 15:
+							text = GameObject.Find("Object").GetComponent<Text>();
+							text.text = "OBJECT: Aroma lamp";
+							break;
+						case 16:
+							text = GameObject.Find("Object").GetComponent<Text>();
+							text.text = "OBJECT: Spanner";
+							break;
+						case 17:
+							text = GameObject.Find("Object").GetComponent<Text>();
+							text.text = "OBJECT: Pallet";
 							break;
 					}
 
@@ -140,6 +205,45 @@ public class ExampleSpooky : MonoBehaviour
 							break;
 						case 4:
 							Instantiate(ApplePrefab, arrowLocation.position, arrowLocation.rotation).GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * shotPower);
+							break;
+						case 5:
+							Instantiate(KiwiPrefab, arrowLocation.position, arrowLocation.rotation).GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * shotPower);
+							break;
+						case 6:
+							Instantiate(LimePrefab, arrowLocation.position, arrowLocation.rotation).GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * shotPower);
+							break;
+						case 7:
+							Instantiate(BallPrefab, arrowLocation.position, arrowLocation.rotation).GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * shotPower);
+							break;
+						case 8:
+							Instantiate(PaperBagPrefab, arrowLocation.position, arrowLocation.rotation).GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * shotPower);
+							break;
+						case 9:
+							Instantiate(FoglioPrefab, arrowLocation.position, arrowLocation.rotation).GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * shotPower);
+							break;
+						case 10:
+							Instantiate(GlassPrefab, arrowLocation.position, arrowLocation.rotation).GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * shotPower);
+							break;
+						case 11:
+							Instantiate(WaterPrefab, arrowLocation.position, arrowLocation.rotation).GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * shotPower);
+							break;
+						case 12:
+							Instantiate(BasketPrefab, arrowLocation.position, arrowLocation.rotation).GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * shotPower);
+							break;
+						case 13:
+							Instantiate(ContainerPrefab, arrowLocation.position, arrowLocation.rotation).GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * shotPower);
+							break;
+						case 14:
+							Instantiate(LidPrefab, arrowLocation.position, arrowLocation.rotation).GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * shotPower);
+							break;
+						case 15:
+							Instantiate(AromaPrefab, arrowLocation.position, arrowLocation.rotation).GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * shotPower);
+							break;
+						case 16:
+							Instantiate(SpannerPrefab, arrowLocation.position, arrowLocation.rotation).GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * shotPower);
+							break;
+						case 17:
+							Instantiate(PalletPrefab, arrowLocation.position, arrowLocation.rotation).GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * shotPower);
 							break;
 					}
 

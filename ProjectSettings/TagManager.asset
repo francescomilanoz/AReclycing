@@ -20,6 +20,7 @@ TagManager:
   - PLASTIC_BIN
   - PAPER_BIN
   - EWASTE_BIN
+  - EWASTE
   layers:
   - Default
   - TransparentFX
