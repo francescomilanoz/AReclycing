@@ -11,6 +11,9 @@ public class targetcollider : MonoBehaviour
     public bool flag;
     public float initialpos;
     public AudioSource hitsound;
+    public AudioSource hit_good;
+    public AudioSource hit_bad;
+
     public GameObject explosiontime;
     public IEnumerator destroy(GameObject missile)
     {
@@ -30,26 +33,31 @@ public class targetcollider : MonoBehaviour
         if (gameObject.tag == "ORGANIC_BIN" && collision.collider.tag == "ORGANIC")
         {
             ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints + 1);
+            hit_good.Play();
         }
         else if (gameObject.tag == "PLASTIC_BIN" && collision.collider.tag == "PLASTIC")
         {
             ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints + 1);
+            hit_good.Play();
         }
         else if (gameObject.tag == "PAPER_BIN" && collision.collider.tag == "PAPER")
         {
             ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints + 1);
+            hit_good.Play();
         }
         else if (gameObject.tag == "EWASTE_BIN" && collision.collider.tag == "EWASTE")
         {
             ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints + 1);
+            hit_good.Play();
         }
         else
         {
             ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints - 1);
+            hit_bad.Play();
         }
 
 
-        hitsound.Play();
+        //hitsound.Play();
         if(collision.collider.tag=="tip")
         {
             print("collide");
@@ -68,7 +76,7 @@ public class targetcollider : MonoBehaviour
             print("rocket");
             collision.collider.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             collision.collider.gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            collision.collider.gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>().Play();
+            //collision.collider.gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>().Play();
             collision.collider.gameObject.transform.GetChild(1).gameObject.SetActive(false);
             StartCoroutine(destroy(collision.collider.gameObject));
           
@@ -76,10 +84,11 @@ public class targetcollider : MonoBehaviour
         }
         if(health<=0)
         {
-            collision.collider.gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>().Play();
+            //collision.collider.gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>().Play();
 
         }
     }
+
 
     // Update is called once per frame
     void Update()
