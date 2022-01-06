@@ -14,6 +14,8 @@ public class targetcollider : MonoBehaviour
     public AudioSource hit_good;
     public AudioSource hit_bad;
 
+    public AudioSource[] sounds;
+
     public GameObject explosiontime;
     public IEnumerator destroy(GameObject missile)
     {
@@ -23,6 +25,8 @@ public class targetcollider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sounds = GetComponents<AudioSource>();
+
         initialpos = transform.position.x;
     }
       void OnCollisionEnter(Collision collision)
@@ -33,27 +37,37 @@ public class targetcollider : MonoBehaviour
         if (gameObject.tag == "ORGANIC_BIN" && collision.collider.tag == "ORGANIC")
         {
             ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints + 1);
-            hit_good.Play();
+            sounds[0].Play();
+            AndroidManager.HapticFeedback();
         }
         else if (gameObject.tag == "PLASTIC_BIN" && collision.collider.tag == "PLASTIC")
         {
             ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints + 1);
-            hit_good.Play();
+            //hit_good.Play();
+            sounds[0].Play();
+            AndroidManager.HapticFeedback();
         }
         else if (gameObject.tag == "PAPER_BIN" && collision.collider.tag == "PAPER")
         {
             ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints + 1);
-            hit_good.Play();
+            //hit_good.Play();
+            sounds[0].Play();
+            AndroidManager.HapticFeedback();
         }
         else if (gameObject.tag == "EWASTE_BIN" && collision.collider.tag == "EWASTE")
         {
             ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints + 1);
-            hit_good.Play();
+            //hit_good.Play();
+            sounds[0].Play();
+            AndroidManager.HapticFeedback();
         }
         else
         {
             ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints - 1);
-            hit_bad.Play();
+            //hit_bad.Play();
+            sounds[1].Play();
+            StartCoroutine(VibrationWrong());
+
         }
 
 
@@ -87,13 +101,25 @@ public class targetcollider : MonoBehaviour
             //collision.collider.gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>().Play();
 
         }
+
+    }
+
+    IEnumerator VibrationWrong()
+    {
+        AndroidManager.HapticFeedback();
+        yield return new WaitForSeconds(0.2f);
+        AndroidManager.HapticFeedback();
+        yield return new WaitForSeconds(0.2f);
+        AndroidManager.HapticFeedback();
+
     }
 
 
     // Update is called once per frame
     void Update()
     {
-       
+        
+
         if (flag)
         {
             transform.LookAt(Camera.main.transform);
