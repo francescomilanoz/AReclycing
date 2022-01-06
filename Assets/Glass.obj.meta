@@ -3,7 +3,13 @@ guid: 9fb90c6b5cfc04f459a54421a12c3365
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cup_GEOMat
+    second: {fileID: -3948765446125736854, guid: 08b452f2ffc2db24faab2fc92a59ce3f,
+      type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
