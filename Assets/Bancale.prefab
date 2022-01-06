@@ -270,17 +270,17 @@ PrefabInstance:
     - target: {fileID: 1151388028547126963, guid: 199828148c9bd754fa8039bbfdb72387,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.001
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 199828148c9bd754fa8039bbfdb72387,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.001
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 199828148c9bd754fa8039bbfdb72387,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.001
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 199828148c9bd754fa8039bbfdb72387,
         type: 3}
