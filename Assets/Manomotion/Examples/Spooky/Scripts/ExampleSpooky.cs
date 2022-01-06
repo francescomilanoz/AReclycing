@@ -31,6 +31,7 @@ public class ExampleSpooky : MonoBehaviour
 	public GameObject AromaPrefab;
 	public GameObject SpannerPrefab;
 	public GameObject PalletPrefab;
+	public GameObject CarpetPrefab;
 	public Transform arrowLocation;
     [SerializeField]
 	Sprite openHandSprite;
@@ -111,7 +112,7 @@ public class ExampleSpooky : MonoBehaviour
                     grabflag = true;
                     triggertext.text = "GRABBED";
 
-					num = Random.Range(1, 18);
+					num = Random.Range(1, 19);
 
 					switch (num)
 					{
@@ -153,7 +154,7 @@ public class ExampleSpooky : MonoBehaviour
 							break;
 						case 10:
 							text = GameObject.Find("Object").GetComponent<Text>();
-							text.text = "OBJECT: Plastic cups";
+							text.text = "OBJECT: Plastic cup";
 							break;
 						case 11:
 							text = GameObject.Find("Object").GetComponent<Text>();
@@ -182,6 +183,10 @@ public class ExampleSpooky : MonoBehaviour
 						case 17:
 							text = GameObject.Find("Object").GetComponent<Text>();
 							text.text = "OBJECT: Pallet";
+							break;
+						case 18:
+							text = GameObject.Find("Object").GetComponent<Text>();
+							text.text = "OBJECT: Carpet";
 							break;
 					}
 
@@ -244,6 +249,9 @@ public class ExampleSpooky : MonoBehaviour
 							break;
 						case 17:
 							Instantiate(PalletPrefab, arrowLocation.position, arrowLocation.rotation).GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * shotPower);
+							break;
+						case 18:
+							Instantiate(CarpetPrefab, arrowLocation.position, arrowLocation.rotation).GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * shotPower);
 							break;
 					}
 
