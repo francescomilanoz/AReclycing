@@ -2,15 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
+
 
 public class GameUIcontroller : MonoBehaviour
 {
     bool menuflag;
+    public bool isAudioActive;
+    public bool isVibrationActive;
+
+    public Sprite soundOn;
+    public Sprite soundOff;
+    public Sprite vibrationOn;
+    public Sprite vibrationOff;
+
     public GameObject panel;
     // Start is called before the first frame update
     void Start()
     {
         menuflag = true;
+        isAudioActive = true;
+        isVibrationActive = true;
         panel.SetActive(menuflag);
 
     }
@@ -47,7 +59,18 @@ public class GameUIcontroller : MonoBehaviour
         }
     }
 
-    
+    public void changeAudio()
+    {
+        isAudioActive = !isAudioActive;
+        //GameObject.Find("ChangeAudio").GetComponent<Image>().image = soundOn;
+    }
+
+    public void changeVibration()
+    {
+        isVibrationActive = !isVibrationActive;
+    }
+
+
     // Update is called once per frame
     void Update()
     {

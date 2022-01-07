@@ -37,36 +37,75 @@ public class targetcollider : MonoBehaviour
         if (gameObject.tag == "ORGANIC_BIN" && collision.collider.tag == "ORGANIC")
         {
             ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints + 1);
-            sounds[0].Play();
-            AndroidManager.HapticFeedback();
+            GameUIcontroller loadData = GameObject.Find("Spookey Canvas").GetComponent<GameUIcontroller>();
+            if(loadData.isAudioActive)
+            {
+                sounds[0].Play();
+            }
+
+            if(loadData.isVibrationActive)
+            {
+                AndroidManager.HapticFeedback();
+            }
+         
         }
         else if (gameObject.tag == "PLASTIC_BIN" && collision.collider.tag == "PLASTIC")
         {
             ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints + 1);
-            //hit_good.Play();
-            sounds[0].Play();
-            AndroidManager.HapticFeedback();
+            GameUIcontroller loadData = GameObject.Find("Spookey Canvas").GetComponent<GameUIcontroller>();
+            if (loadData.isAudioActive)
+            {
+                sounds[0].Play();
+            }
+
+            if (loadData.isVibrationActive)
+            {
+                AndroidManager.HapticFeedback();
+            }
+
         }
         else if (gameObject.tag == "PAPER_BIN" && collision.collider.tag == "PAPER")
         {
             ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints + 1);
-            //hit_good.Play();
-            sounds[0].Play();
-            AndroidManager.HapticFeedback();
+            GameUIcontroller loadData = GameObject.Find("Spookey Canvas").GetComponent<GameUIcontroller>();
+            if (loadData.isAudioActive)
+            {
+                sounds[0].Play();
+            }
+
+            if (loadData.isVibrationActive)
+            {
+                AndroidManager.HapticFeedback();
+            }
         }
         else if (gameObject.tag == "EWASTE_BIN" && collision.collider.tag == "EWASTE")
         {
             ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints + 1);
-            //hit_good.Play();
-            sounds[0].Play();
-            AndroidManager.HapticFeedback();
+            GameUIcontroller loadData = GameObject.Find("Spookey Canvas").GetComponent<GameUIcontroller>();
+            if (loadData.isAudioActive)
+            {
+                sounds[0].Play();
+            }
+
+            if (loadData.isVibrationActive)
+            {
+                AndroidManager.HapticFeedback();
+            }
         }
         else
         {
             ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints - 1);
-            //hit_bad.Play();
-            sounds[1].Play();
-            StartCoroutine(VibrationWrong());
+            GameUIcontroller loadData = GameObject.Find("Spookey Canvas").GetComponent<GameUIcontroller>();
+            if (loadData.isAudioActive)
+            {
+                sounds[1].Play();
+            }
+
+            if (loadData.isVibrationActive)
+            {
+                StartCoroutine(VibrationWrong());
+            }
+           
 
         }
 
