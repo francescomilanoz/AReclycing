@@ -14,6 +14,15 @@ public class targetcollider : MonoBehaviour
     public AudioSource hit_good;
     public AudioSource hit_bad;
 
+    public Vector3 pos1;
+    public Quaternion rot1;
+    public Vector3 pos2;
+    public Quaternion rot2;
+    public Vector3 pos3;
+    public Quaternion rot3;
+    public Vector3 pos4;
+    public Quaternion rot4;
+
     public AudioSource[] sounds;
 
     public GameObject explosiontime;
@@ -26,6 +35,15 @@ public class targetcollider : MonoBehaviour
     void Start()
     {
         sounds = GetComponents<AudioSource>();
+
+        pos1 = GameObject.Find("Plastic Bin").transform.position;
+        rot1 = GameObject.Find("Plastic Bin").transform.rotation;
+        pos2 = GameObject.Find("Ewaste Bin").transform.position;
+        rot2 = GameObject.Find("Ewaste Bin").transform.rotation;
+        pos3 = GameObject.Find("Paper Bin").transform.position;
+        rot3 = GameObject.Find("Paper Bin").transform.rotation;
+        pos4 = GameObject.Find("Organic Bin").transform.position;
+        rot4 = GameObject.Find("Organic Bin").transform.rotation;
 
         initialpos = transform.position.x;
     }
@@ -134,14 +152,7 @@ public class targetcollider : MonoBehaviour
 
         if(ManomotionManager.Instance.CurrentPoints > 1)
         {
-            Vector3 pos1 = new Vector3(9f, -12f, 27f);
-            Quaternion rot1 = new Quaternion(0f, 30f, 0f, 0f);
-            Vector3 pos2 = new Vector3(0f, -12f, 30f);
-            Quaternion rot2 = new Quaternion(0f, 10f, 0f, 0f);
-            Vector3 pos3 = new Vector3(-9f, -12f, 30f);
-            Quaternion rot3 = new Quaternion(0f, -10f, 0f, 0f);
-            Vector3 pos4 = new Vector3(-18f, -12f, 25f);
-            Quaternion rot4 = new Quaternion(0f, -30f, 0f, 0f);
+
 
             Vector3[] positions = { pos1, pos2, pos3, pos4 };
             Quaternion[] rotations = { rot1, rot2, rot3, rot4 };
