@@ -29,7 +29,26 @@ public class targetcollider : MonoBehaviour
 
         initialpos = transform.position.x;
     }
-      void OnCollisionEnter(Collision collision)
+
+
+    void Shuffle(int[] a)
+    {
+        // Loops through array
+        for (int i = a.Length - 1; i > 0; i--)
+        {
+            // Randomize a number between 0 and i (so that the range decreases each time)
+            int rnd = Random.Range(0, i);
+
+            // Save the value of the current i, otherwise it'll overright when we swap the values
+            int temp = a[i];
+
+            // Swap the new and old values
+            a[i] = a[rnd];
+            a[rnd] = temp;
+        }
+
+    }
+        void OnCollisionEnter(Collision collision)
     {
 
         Destroy(collision.collider.gameObject);
@@ -94,7 +113,11 @@ public class targetcollider : MonoBehaviour
         }
         else
         {
-            ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints - 1);
+            if (ManomotionManager.Instance.CurrentPoints > 0)
+            {
+                ManomotionManager.Instance.SetCurrentPoints(ManomotionManager.Instance.CurrentPoints - 1);
+            } 
+             
             GameUIcontroller loadData = GameObject.Find("Spookey Canvas").GetComponent<GameUIcontroller>();
             if (loadData.isAudioActive)
             {
@@ -107,6 +130,34 @@ public class targetcollider : MonoBehaviour
             }
            
 
+        }
+
+        if(ManomotionManager.Instance.CurrentPoints > 1)
+        {
+            Vector3 pos1 = new Vector3(9f, -12f, 27f);
+            Quaternion rot1 = new Quaternion(0f, 30f, 0f, 0f);
+            Vector3 pos2 = new Vector3(0f, -12f, 30f);
+            Quaternion rot2 = new Quaternion(0f, 10f, 0f, 0f);
+            Vector3 pos3 = new Vector3(-9f, -12f, 30f);
+            Quaternion rot3 = new Quaternion(0f, -10f, 0f, 0f);
+            Vector3 pos4 = new Vector3(-18f, -12f, 25f);
+            Quaternion rot4 = new Quaternion(0f, -30f, 0f, 0f);
+
+            Vector3[] positions = { pos1, pos2, pos3, pos4 };
+            Quaternion[] rotations = { rot1, rot2, rot3, rot4 };
+
+            int[] rand_positions = { 0, 1, 2, 3 };
+            Shuffle(rand_positions);
+
+            GameObject.Find("Plastic Bin").transform.position = positions[rand_positions[0]];
+            GameObject.Find("Ewaste Bin").transform.position = positions[rand_positions[1]];
+            GameObject.Find("Organic Bin").transform.position = positions[rand_positions[2]];
+            GameObject.Find("Paper Bin").transform.position = positions[rand_positions[3]];
+
+            GameObject.Find("Plastic Bin").transform.rotation = rotations[rand_positions[0]];
+            GameObject.Find("Ewaste Bin").transform.rotation = rotations[rand_positions[1]];
+            GameObject.Find("Organic Bin").transform.rotation = rotations[rand_positions[2]];
+            GameObject.Find("Paper Bin").transform.rotation = rotations[rand_positions[3]];
         }
 
 
@@ -140,6 +191,10 @@ public class targetcollider : MonoBehaviour
             //collision.collider.gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>().Play();
 
         }
+
+
+  
+
 
     }
 
