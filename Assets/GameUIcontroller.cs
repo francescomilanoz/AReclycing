@@ -59,6 +59,14 @@ public class GameUIcontroller : MonoBehaviour
         }
     }
 
+    public void ResetGame()
+    {
+        GameObject.Find("ManoMotionCanvas").GetComponent<ManomotionUIManagment>().secondsRemaining = 120;
+        ManomotionManager.Instance.SetCurrentPoints(0);
+        StartCoroutine(GameObject.Find("ManoMotionCanvas").GetComponent<ManomotionUIManagment>().UpdateRemainingTime());
+        
+    }
+
     public void changeAudio()
     {
         isAudioActive = !isAudioActive;

@@ -23,6 +23,9 @@ public class targetcollider : MonoBehaviour
     public Vector3 pos4;
     public Quaternion rot4;
 
+    public Vector3 originalScale;
+    public Vector3 smallestScale;
+
     public AudioSource[] sounds;
 
     public GameObject explosiontime;
@@ -44,6 +47,12 @@ public class targetcollider : MonoBehaviour
         rot3 = GameObject.Find("Paper Bin").transform.rotation;
         pos4 = GameObject.Find("Organic Bin").transform.position;
         rot4 = GameObject.Find("Organic Bin").transform.rotation;
+
+        originalScale = GameObject.Find("Plastic Bin").transform.localScale;
+        smallestScale = originalScale;
+        smallestScale.x = smallestScale.x * 0.7f;
+        smallestScale.y = smallestScale.y * 0.7f;
+        smallestScale.z = smallestScale.z * 0.7f;
 
         initialpos = transform.position.x;
     }
@@ -150,7 +159,7 @@ public class targetcollider : MonoBehaviour
 
         }
 
-        if(ManomotionManager.Instance.CurrentPoints > 1)
+        if(ManomotionManager.Instance.CurrentPoints > 8)
         {
 
 
@@ -169,6 +178,20 @@ public class targetcollider : MonoBehaviour
             GameObject.Find("Ewaste Bin").transform.rotation = rotations[rand_positions[1]];
             GameObject.Find("Organic Bin").transform.rotation = rotations[rand_positions[2]];
             GameObject.Find("Paper Bin").transform.rotation = rotations[rand_positions[3]];
+        }
+
+        if(ManomotionManager.Instance.CurrentPoints > 16)
+        {
+            GameObject.Find("Plastic Bin").transform.localScale = smallestScale;
+            GameObject.Find("Ewaste Bin").transform.localScale = smallestScale;
+            GameObject.Find("Organic Bin").transform.localScale = smallestScale;
+            GameObject.Find("Paper Bin").transform.localScale = smallestScale;
+        } else
+        {
+            GameObject.Find("Plastic Bin").transform.localScale = originalScale;
+            GameObject.Find("Ewaste Bin").transform.localScale = originalScale;
+            GameObject.Find("Organic Bin").transform.localScale = originalScale;
+            GameObject.Find("Paper Bin").transform.localScale = originalScale;
         }
 
 

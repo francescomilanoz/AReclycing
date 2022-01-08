@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -272,6 +272,16 @@ MonoBehaviour:
   hit_good: {fileID: 1610197402860042963, guid: 4bb65781e1e8bf44186f59e8b85f8ab0,
     type: 3}
   hit_bad: {fileID: 3804591818390145006, guid: 97fe267c683229e4a865594b910d1f6f, type: 3}
+  pos1: {x: 0, y: 0, z: 0}
+  rot1: {x: 0, y: 0, z: 0, w: 0}
+  pos2: {x: 0, y: 0, z: 0}
+  rot2: {x: 0, y: 0, z: 0, w: 0}
+  pos3: {x: 0, y: 0, z: 0}
+  rot3: {x: 0, y: 0, z: 0, w: 0}
+  pos4: {x: 0, y: 0, z: 0}
+  rot4: {x: 0, y: 0, z: 0, w: 0}
+  originalScale: {x: 0, y: 0, z: 0}
+  smallestScale: {x: 0, y: 0, z: 0}
   sounds: []
   explosiontime: {fileID: 0}
 --- !u!23 &144355351
@@ -347,6 +357,16 @@ MonoBehaviour:
   hitsound: {fileID: 0}
   hit_good: {fileID: 0}
   hit_bad: {fileID: 0}
+  pos1: {x: 0, y: 0, z: 0}
+  rot1: {x: 0, y: 0, z: 0, w: 0}
+  pos2: {x: 0, y: 0, z: 0}
+  rot2: {x: 0, y: 0, z: 0, w: 0}
+  pos3: {x: 0, y: 0, z: 0}
+  rot3: {x: 0, y: 0, z: 0, w: 0}
+  pos4: {x: 0, y: 0, z: 0}
+  rot4: {x: 0, y: 0, z: 0, w: 0}
+  originalScale: {x: 0, y: 0, z: 0}
+  smallestScale: {x: 0, y: 0, z: 0}
   sounds: []
   explosiontime: {fileID: 0}
 --- !u!82 &166560613
@@ -760,6 +780,16 @@ MonoBehaviour:
   hitsound: {fileID: 0}
   hit_good: {fileID: 0}
   hit_bad: {fileID: 0}
+  pos1: {x: 0, y: 0, z: 0}
+  rot1: {x: 0, y: 0, z: 0, w: 0}
+  pos2: {x: 0, y: 0, z: 0}
+  rot2: {x: 0, y: 0, z: 0, w: 0}
+  pos3: {x: 0, y: 0, z: 0}
+  rot3: {x: 0, y: 0, z: 0, w: 0}
+  pos4: {x: 0, y: 0, z: 0}
+  rot4: {x: 0, y: 0, z: 0, w: 0}
+  originalScale: {x: 0, y: 0, z: 0}
+  smallestScale: {x: 0, y: 0, z: 0}
   sounds: []
   explosiontime: {fileID: 0}
 --- !u!82 &283441643
@@ -1320,6 +1350,16 @@ MonoBehaviour:
   hitsound: {fileID: 1093811189}
   hit_good: {fileID: 0}
   hit_bad: {fileID: 0}
+  pos1: {x: 0, y: 0, z: 0}
+  rot1: {x: 0, y: 0, z: 0, w: 0}
+  pos2: {x: 0, y: 0, z: 0}
+  rot2: {x: 0, y: 0, z: 0, w: 0}
+  pos3: {x: 0, y: 0, z: 0}
+  rot3: {x: 0, y: 0, z: 0, w: 0}
+  pos4: {x: 0, y: 0, z: 0}
+  rot4: {x: 0, y: 0, z: 0, w: 0}
+  originalScale: {x: 0, y: 0, z: 0}
+  smallestScale: {x: 0, y: 0, z: 0}
   sounds: []
   explosiontime: {fileID: 5134042110138392507, guid: f2cd328ca99639d4db0387a62f79a025,
     type: 3}
@@ -1363,6 +1403,16 @@ MonoBehaviour:
   hit_good: {fileID: 1610197402860042963, guid: 4bb65781e1e8bf44186f59e8b85f8ab0,
     type: 3}
   hit_bad: {fileID: 3804591818390145006, guid: 97fe267c683229e4a865594b910d1f6f, type: 3}
+  pos1: {x: 0, y: 0, z: 0}
+  rot1: {x: 0, y: 0, z: 0, w: 0}
+  pos2: {x: 0, y: 0, z: 0}
+  rot2: {x: 0, y: 0, z: 0, w: 0}
+  pos3: {x: 0, y: 0, z: 0}
+  rot3: {x: 0, y: 0, z: 0, w: 0}
+  pos4: {x: 0, y: 0, z: 0}
+  rot4: {x: 0, y: 0, z: 0, w: 0}
+  originalScale: {x: 0, y: 0, z: 0}
+  smallestScale: {x: 0, y: 0, z: 0}
   sounds: []
   explosiontime: {fileID: 0}
 --- !u!33 &432319835
@@ -1454,6 +1504,11 @@ PrefabInstance:
       propertyPath: PointsValueText
       value: 
       objectReference: {fileID: 1130714699}
+    - target: {fileID: 114733843936693650, guid: 0f8504ddba966c5459c5954aff90da2d,
+        type: 3}
+      propertyPath: SecondsValueText
+      value: 
+      objectReference: {fileID: 833216342}
     - target: {fileID: 224272445527916418, guid: 0f8504ddba966c5459c5954aff90da2d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1971,7 +2026,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Win points if you throw the objects in the correct bins, lose point if
-    you throw them in a wrong one or if you miss the bins. Have fun!
+    you throw them in a wrong one. Have fun!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2040,12 +2095,12 @@ MonoBehaviour:
   m_margin: {x: -193.55977, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 547258691}
-    characterCount: 135
+    characterCount: 111
     spriteCount: 0
-    spaceCount: 28
-    wordCount: 29
+    spaceCount: 22
+    wordCount: 23
     linkCount: 0
-    lineCount: 5
+    lineCount: 4
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -2531,6 +2586,100 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677455450}
   m_CullTransparentMesh: 0
+--- !u!1 &833216341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 833216344}
+  - component: {fileID: 833216343}
+  - component: {fileID: 833216342}
+  - component: {fileID: 833216345}
+  m_Layer: 5
+  m_Name: TimeRemaining
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &833216342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833216341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: bd268ece5ad6a304cad293bd57762c3b, type: 3}
+    m_FontSize: 17
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'TIME: '
+--- !u!222 &833216343
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833216341}
+  m_CullTransparentMesh: 0
+--- !u!224 &833216344
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833216341}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1882233969}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -93.86}
+  m_SizeDelta: {x: 120, y: 30}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &833216345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833216341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &846933980 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 28723f10c2a8e094a9351e892f5271b8,
@@ -2556,6 +2705,16 @@ MonoBehaviour:
   hitsound: {fileID: 1093811189}
   hit_good: {fileID: 0}
   hit_bad: {fileID: 0}
+  pos1: {x: 0, y: 0, z: 0}
+  rot1: {x: 0, y: 0, z: 0, w: 0}
+  pos2: {x: 0, y: 0, z: 0}
+  rot2: {x: 0, y: 0, z: 0, w: 0}
+  pos3: {x: 0, y: 0, z: 0}
+  rot3: {x: 0, y: 0, z: 0, w: 0}
+  pos4: {x: 0, y: 0, z: 0}
+  rot4: {x: 0, y: 0, z: 0, w: 0}
+  originalScale: {x: 0, y: 0, z: 0}
+  smallestScale: {x: 0, y: 0, z: 0}
   sounds: []
   explosiontime: {fileID: 5134042110138392507, guid: f2cd328ca99639d4db0387a62f79a025,
     type: 3}
@@ -2901,7 +3060,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Start!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2970,7 +3129,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 913916506}
-    characterCount: 8
+    characterCount: 6
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -3835,6 +3994,7 @@ GameObject:
   - component: {fileID: 1130714698}
   - component: {fileID: 1130714700}
   - component: {fileID: 1130714699}
+  - component: {fileID: 1130714701}
   m_Layer: 5
   m_Name: CurrentPoints
   m_TagString: Untagged
@@ -3902,6 +4062,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130714697}
   m_CullTransparentMesh: 0
+--- !u!114 &1130714701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130714697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &1140929955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4069,6 +4244,16 @@ MonoBehaviour:
   hit_good: {fileID: 1610197402860042963, guid: 4bb65781e1e8bf44186f59e8b85f8ab0,
     type: 3}
   hit_bad: {fileID: 3804591818390145006, guid: 97fe267c683229e4a865594b910d1f6f, type: 3}
+  pos1: {x: 0, y: 0, z: 0}
+  rot1: {x: 0, y: 0, z: 0, w: 0}
+  pos2: {x: 0, y: 0, z: 0}
+  rot2: {x: 0, y: 0, z: 0, w: 0}
+  pos3: {x: 0, y: 0, z: 0}
+  rot3: {x: 0, y: 0, z: 0, w: 0}
+  pos4: {x: 0, y: 0, z: 0}
+  rot4: {x: 0, y: 0, z: 0, w: 0}
+  originalScale: {x: 0, y: 0, z: 0}
+  smallestScale: {x: 0, y: 0, z: 0}
   sounds: []
   explosiontime: {fileID: 0}
 --- !u!33 &1140929959
@@ -4138,6 +4323,16 @@ MonoBehaviour:
   hitsound: {fileID: 0}
   hit_good: {fileID: 0}
   hit_bad: {fileID: 0}
+  pos1: {x: 0, y: 0, z: 0}
+  rot1: {x: 0, y: 0, z: 0, w: 0}
+  pos2: {x: 0, y: 0, z: 0}
+  rot2: {x: 0, y: 0, z: 0, w: 0}
+  pos3: {x: 0, y: 0, z: 0}
+  rot3: {x: 0, y: 0, z: 0, w: 0}
+  pos4: {x: 0, y: 0, z: 0}
+  rot4: {x: 0, y: 0, z: 0, w: 0}
+  originalScale: {x: 0, y: 0, z: 0}
+  smallestScale: {x: 0, y: 0, z: 0}
   sounds: []
   explosiontime: {fileID: 0}
 --- !u!82 &1140929962
@@ -5107,6 +5302,16 @@ MonoBehaviour:
   hitsound: {fileID: 1093811189}
   hit_good: {fileID: 0}
   hit_bad: {fileID: 0}
+  pos1: {x: 0, y: 0, z: 0}
+  rot1: {x: 0, y: 0, z: 0, w: 0}
+  pos2: {x: 0, y: 0, z: 0}
+  rot2: {x: 0, y: 0, z: 0, w: 0}
+  pos3: {x: 0, y: 0, z: 0}
+  rot3: {x: 0, y: 0, z: 0, w: 0}
+  pos4: {x: 0, y: 0, z: 0}
+  rot4: {x: 0, y: 0, z: 0, w: 0}
+  originalScale: {x: 0, y: 0, z: 0}
+  smallestScale: {x: 0, y: 0, z: 0}
   sounds: []
   explosiontime: {fileID: 5134042110138392507, guid: f2cd328ca99639d4db0387a62f79a025,
     type: 3}
@@ -5238,6 +5443,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1200144992}
         m_MethodName: Menu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1200144992}
+        m_MethodName: ResetGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5814,6 +6030,16 @@ MonoBehaviour:
   hit_good: {fileID: 1610197402860042963, guid: 4bb65781e1e8bf44186f59e8b85f8ab0,
     type: 3}
   hit_bad: {fileID: 3804591818390145006, guid: 97fe267c683229e4a865594b910d1f6f, type: 3}
+  pos1: {x: 0, y: 0, z: 0}
+  rot1: {x: 0, y: 0, z: 0, w: 0}
+  pos2: {x: 0, y: 0, z: 0}
+  rot2: {x: 0, y: 0, z: 0, w: 0}
+  pos3: {x: 0, y: 0, z: 0}
+  rot3: {x: 0, y: 0, z: 0, w: 0}
+  pos4: {x: 0, y: 0, z: 0}
+  rot4: {x: 0, y: 0, z: 0, w: 0}
+  originalScale: {x: 0, y: 0, z: 0}
+  smallestScale: {x: 0, y: 0, z: 0}
   sounds: []
   explosiontime: {fileID: 0}
 --- !u!33 &1621874366
@@ -6031,6 +6257,7 @@ GameObject:
   - component: {fileID: 1676289453}
   - component: {fileID: 1676289455}
   - component: {fileID: 1676289454}
+  - component: {fileID: 1676289456}
   m_Layer: 5
   m_Name: Object
   m_TagString: Untagged
@@ -6051,7 +6278,7 @@ RectTransform:
   m_Children:
   - {fileID: 283365350}
   m_Father: {fileID: 1882233969}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -6099,6 +6326,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1676289452}
   m_CullTransparentMesh: 0
+--- !u!114 &1676289456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676289452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &1690610145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6488,6 +6730,16 @@ MonoBehaviour:
   hitsound: {fileID: 0}
   hit_good: {fileID: 0}
   hit_bad: {fileID: 0}
+  pos1: {x: 0, y: 0, z: 0}
+  rot1: {x: 0, y: 0, z: 0, w: 0}
+  pos2: {x: 0, y: 0, z: 0}
+  rot2: {x: 0, y: 0, z: 0, w: 0}
+  pos3: {x: 0, y: 0, z: 0}
+  rot3: {x: 0, y: 0, z: 0, w: 0}
+  pos4: {x: 0, y: 0, z: 0}
+  rot4: {x: 0, y: 0, z: 0, w: 0}
+  originalScale: {x: 0, y: 0, z: 0}
+  smallestScale: {x: 0, y: 0, z: 0}
   sounds: []
   explosiontime: {fileID: 0}
 --- !u!82 &1785250338

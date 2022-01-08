@@ -1,15 +1,18 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 public class ManomotionUIManagment : MonoBehaviour
 {
     private bool _showLicenseInfo;
 
     [SerializeField]
-    private Text FPSValueText, PointsValueText, processingTimeValueText, versionText, credits, daysLeft, licenseEnd;
+    private Text FPSValueText, PointsValueText, SecondsValueText , processingTimeValueText, versionText, credits, daysLeft, licenseEnd;
 
     [SerializeField]
     private GameObject licenseInfoGizmo;
+
+    public int secondsRemaining;
 
     private void Awake()
     {
@@ -20,6 +23,7 @@ public class ManomotionUIManagment : MonoBehaviour
         ManomotionManager.OnManoMotionFrameProcessed += DisplayInformationAfterManoMotionProcessFrame;
         ManomotionManager.OnManoMotionLicenseInitialized += HandleManoMotionManagerInitialized;
     }
+
 
     /// <summary>
     /// Displays information from the ManoMotion Manager after the frame has been processed.
@@ -38,6 +42,23 @@ public class ManomotionUIManagment : MonoBehaviour
     public void ToggleUIElement(GameObject givenObject)
     {
         givenObject.SetActive(!givenObject.activeInHierarchy);
+    }
+
+    public IEnumerator UpdateRemainingTime()
+    {
+        while(true)
+        {
+            SecondsValueText.text = "TIME: " + secondsRemaining + "s";
+            if (secondsRemaining > 0)
+            {
+                secondsRemaining = secondsRemaining - 1;
+                yield return new WaitForSeconds(1);
+            } else
+            {
+                GameObject.Find("Spookey Canvas").GetComponent<GameUIcontroller>().Menu();
+                break;
+            }
+        }
     }
 
     /// <summary>
