@@ -159,7 +159,7 @@ public class targetcollider : MonoBehaviour
 
         }
 
-        if(ManomotionManager.Instance.CurrentPoints > 8)
+        if(ManomotionManager.Instance.CurrentPoints > 6)
         {
 
 
@@ -180,7 +180,7 @@ public class targetcollider : MonoBehaviour
             GameObject.Find("Paper Bin").transform.rotation = rotations[rand_positions[3]];
         }
 
-        if(ManomotionManager.Instance.CurrentPoints > 16)
+        if(ManomotionManager.Instance.CurrentPoints > 12)
         {
             GameObject.Find("Plastic Bin").transform.localScale = smallestScale;
             GameObject.Find("Ewaste Bin").transform.localScale = smallestScale;

@@ -61,7 +61,7 @@ public class GameUIcontroller : MonoBehaviour
 
     public void ResetGame()
     {
-        GameObject.Find("ManoMotionCanvas").GetComponent<ManomotionUIManagment>().secondsRemaining = 120;
+        GameObject.Find("ManoMotionCanvas").GetComponent<ManomotionUIManagment>().secondsRemaining = 90;
         ManomotionManager.Instance.SetCurrentPoints(0);
         StartCoroutine(GameObject.Find("ManoMotionCanvas").GetComponent<ManomotionUIManagment>().UpdateRemainingTime());
         
